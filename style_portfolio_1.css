@@ -1,0 +1,423 @@
+body{
+  background: #FFC967;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: PT sans;
+}
+main{
+  background: #FFC967;
+  display: flex;
+  flex-direction: column;
+}
+  
+/*****************************************/
+/*                HEADER* /
+/* ****************************************/
+
+header, footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center;
+  margin: 40 40px;
+  background: radial-gradient(#a21700, #8d2a19);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-end-end-radius: 40px;
+  border-end-start-radius: 40px;
+}
+header{
+  box-shadow: 5px 10px 8px 2px #d6a447;
+  width: 70vw;
+  height: 10vh;
+  position: fixed;
+  top: 20;
+  z-index: 1;
+}
+
+
+#monogram   {
+  width: 5vw;
+  height: 10vh;
+  opacity: 0.6;
+  margin: 0 20px;
+}
+#about_me a:hover   {
+  background-color: rgb(195, 188, 147);
+  color:rgb(16, 100, 30);
+  border-radius: 50%;
+  font-size: xx-large;
+  font-weight: 900;
+}
+.dropdownmenu  {
+  color: rgb(151, 206, 106);
+  font-size: x-large;
+  padding: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  #monogram {
+    display: none;
+  }
+}
+
+/*****************************************/
+/*                       *FOOTER*/
+/* ****************************************/
+footer  {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: -5px -10px 8px -2px #d6a447;
+  position: fixed;
+  bottom: 0px;
+  width: 50vw;
+  color: rgb(162, 207, 125);
+  font-size: x-large;
+}
+footer p  {
+  margin-left: 15px;
+}
+footer > ul  {
+  width: 120px;
+  list-style-type: square;
+  width: 450px;
+}
+footer  a:hover {
+  color: gold;
+background-color: #e98371;
+}
+@media (max-width: 968px) {
+  header, footer{
+    width: 90%;
+  }
+}
+
+@media (max-width: 590px) {
+  header, footer {
+    width: 100%;
+  }
+}
+
+
+
+/******************************************/
+/*               NAVIGATIE
+/******************************************/
+nav{
+  display: flex;
+  padding: 30px;
+}
+
+
+#hamburger_items > a, p  {
+  color: rgb(151, 206, 106);
+  font-size: x-large;
+  padding: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+header a:hover   {
+  background-color: rgb(243, 221, 94);
+  color:rgb(139, 46, 23);
+  border-radius: 50%;
+  padding: 10px;
+  font-weight: 900;
+}
+
+.dropdownmenu {
+  position: relative;
+  display: inline-block;
+}
+.dropdownmenu span:hover    {
+  background-color: rgb(243, 221, 94);
+  color:rgb(139, 46, 23);
+  border-radius: 50%;
+  padding: 10px;
+  font-weight: 900;
+}
+
+.dropdown_inhoud {
+  display: none;
+  position: absolute;
+  background-color: #69FFC8;
+  font-size: x-large;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown_inhoud > a  {
+  background-color: #69FFC8;
+}
+
+
+.dropdownmenu:hover .dropdown_inhoud {
+  display: block;
+}
+
+
+@media  (max-width:660px ) {
+  body, a, footer {
+    font-size: 15px;
+  }
+}
+@media  (max-width:660px ) {
+  #trans_Container_Left,
+  #trans_Container_Right {
+    font-size:15px;
+    color: green;
+  }
+}
+
+/******************************************/
+/*               BODY FRONTPAGE
+/******************************************/
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+.intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#trans_Container_Left  {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1rem;
+  padding: 15px;
+  position: absolute;
+  top: 15vh;
+  border-top: 12px solid #a26800;
+  border-radius: 12px;
+}
+
+#trans_Container_Left  {
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-name: ani_upleft; 
+} 
+
+@keyframes ani_upleft {
+        
+  0% {top: 15vh; opacity: 0.00;}
+  25% {top: 15vh; opacity: 0.05;}
+  35% {top: 15vh; opacity: 0.1;}
+  50% {top: 15vh; opacity: 0.2;}
+  60% {top: 15vh; opacity: 0.3;}
+  75% {top: 15vh; opacity: 0.4;}
+  85% {top: 15vh; opacity: 0.5;}
+  90% {top: 15vh; opacity: 0.6}
+  95% {top: 15vh; opacity: 0.7}
+  97% {top: 15vh; opacity: 0.8;}
+  98% {top: 15vh; opacity: 0.90;}
+  99% {top: 15vh; opacity: 0.95;}
+ 100% {top: 15vh; opacity: 1;}
+} 
+
+#trans_Container_Right  {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  padding: 15px;
+  position: absolute;
+  top: 20vh;
+  border-bottom: 12px solid #a26800;
+  border-radius: 12px;
+} 
+#trans_Container_Right  {
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-name: ani_upright; 
+}
+@keyframes ani_upright {
+        
+       0% {top: 20vh; opacity: 0.00;}
+       95% {top: 20vh; opacity: 0.0;}
+       97% {top: 20vh; opacity: 0.2;}
+       98% {top: 20vh; opacity: 0.5;}
+       99% {top: 20vh; opacity: 0.8;}
+      100% {top: 20vh; opacity: 0.1;}
+} 
+@media  (max-width:660px ) {
+  #trans_Container_Left,
+  #trans_Container_Right {
+    font-size:15px;
+    color: green;
+  }
+}
+
+#github {
+  position: absolute;
+  top: 15vh;
+}
+#github:hover{
+  background: radial-gradient(#47102e, #a75080);
+  border-radius: 10px;
+}
+#github-png {
+  width: 7vh;
+  height:7vh;
+}
+
+#portfolio  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 40vh;
+  font-size: 3em;
+  font-weight: 700;
+
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-name: ani-portfolio; 
+}
+@keyframes ani-portfolio {
+        
+       0% {top: 40vh; opacity: 0.00;}
+       95% {top: 40vh; opacity: 0.00;}
+       98% {top: 40vh; opacity: 0.4;}
+       99% {top: 40vh; opacity: 0.45;}
+      100% {top: 40vh; opacity: 0.1;}
+}
+/******************************************/
+/*               SECTION ABOUT ME
+/******************************************/
+
+.section_about_me {
+  background-color: #DCA644;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100vh;
+  height: 100vh;
+  align-items: center;
+  color: #a21700;
+
+}
+
+#about_me {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 30px;
+}
+#about_me > div{
+  padding:0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+#about_me h1, p  {
+  color: white;
+  
+}
+.something  {
+  color: green;
+}
+
+
+.img_humor {
+  width: 150px;
+  height: 225px;
+  transform: width heigt translate;
+  transform: rotate(20deg);
+  margin-left: -2vw;
+
+}
+
+.img_humor:hover {width: 500px; height: auto; transform: rotate(0deg);}
+
+
+
+
+
+/******************************************/
+/*               PAGE MY WORK
+/******************************************/
+#cardbox  {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+  justify-self: center;
+  padding: 40px;  
+  position: absolute;
+  top: 20vh;
+  border: 2px solid black;
+  align-items: flex-start;
+}
+
+
+ /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+ .flip-card {
+  background-color: transparent;
+  width: 330px;
+  height: 220px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background: radial-gradient(#c56e5e, #e98371);
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+} 
+
+
+/******************************************/
+/*               PAGE MY WORK
+/******************************************/
+
+
+
+
